@@ -35,7 +35,7 @@ def get_guess():
     # the amount of guesses the user has by 1
     else:
       print ("That letter is not in the secret word!")
-      guesses_left -= 1
+      guesses_left = guesses_left - 1
     
   if guesses_left < 0:
     print ("You lose. The word was: " + str(secret_word))
@@ -61,7 +61,10 @@ def update_dashes(secret, cur_dash, rec_guess):
       
   return result
     
-words = ["bob", "cool", "whatup"]
+words = ["hangman", "chairs", "backpack", "bodywash", "clothing",
+                 "computer", "python", "program", "glasses", "sweatshirt",
+                 "sweatpants", "mattress", "friends", "clocks", "biology",
+                 "algebra", "suitcase", "knives", "ninjas", "shampoo"]
 
 secret_word = random.choice(words)
 get_guess()
